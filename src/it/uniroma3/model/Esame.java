@@ -21,7 +21,7 @@ import javax.persistence.TemporalType;
 	query="SELECT e FROM Esame e WHERE pazienteId = :id")
 })
 public class Esame {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -38,8 +38,8 @@ public class Esame {
 	@Temporal (TemporalType.DATE)
 	private Date dataEsameEffettuato;
 
-//	@OneToOne
-//	private Paziente paziente;
+	@OneToOne
+	private Paziente paziente;
 
 
 	@Override
@@ -125,13 +125,13 @@ public class Esame {
 		this.dataEsameEffettuato = dataEsameEffettuato;
 	}
 
-//	public Paziente getPaziente() {
-//		return paziente;
-//	}
-//
-//	public void setPaziente(Paziente paziente) {
-//		this.paziente = paziente;
-//	}
+	public Paziente getPaziente() {
+		return paziente;
+	}
+
+	public void setPaziente(Paziente paziente) {
+		this.paziente = paziente;
+	}
 
 	public Esame(Long id, Date dataPrenotazione, Date dataEsameEffettuato) {
 		super();

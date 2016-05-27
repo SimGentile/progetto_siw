@@ -29,7 +29,7 @@ public class Medico {
 	private String cognome;
 	
 	@Column(length = 2000)
-	private String descrizione;
+	private String specializzazione;
 	
 	@OneToMany
 	private List<Esame> esamiEffettuati;
@@ -61,13 +61,13 @@ public class Medico {
 
 
 	public String getDescrizione() {
-		return descrizione;
+		return specializzazione;
 	}
 
 
 
 	public void setDescrizione(String descrizione) {
-		this.descrizione = descrizione;
+		this.specializzazione = descrizione;
 	}
 
 
@@ -76,13 +76,13 @@ public class Medico {
 		super();
 		this.nome = nome;
 		this.cognome = cognome;
-		this.descrizione = descrizione;
+		this.specializzazione = descrizione;
 	}
 
 
 
 	@Override
 	public String toString() {
-		return "Medico [nome=" + nome + ", cognome=" + cognome + ", descrizione=" + descrizione + "]";
+		return "Medico [nome=" + nome + ", cognome=" + cognome + ", descrizione=" + specializzazione + "]";
 	}
 }
