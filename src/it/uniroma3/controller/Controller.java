@@ -4,6 +4,7 @@ package it.uniroma3.controller;
 import java.io.IOException;
 import java.util.Scanner;
 
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -34,7 +35,6 @@ public class Controller extends HttpServlet {
 		ServletContext application  = getServletContext();
 		RequestDispatcher rd = application.getRequestDispatcher(nextPage);
 		rd.forward(request, response);
-		return; 
 	}
 
 	private String path2action(HttpServletRequest request) {
@@ -50,8 +50,8 @@ public class Controller extends HttpServlet {
 		String action = scanner.next();
 		action = action.substring(0,1).toUpperCase() + action.substring(1);
 
-		String actionName = "it.uniroma3.controller.action." + action + model;
-		return actionName;
+		return "it.uniroma3.controller.action." + action + model;
+
 
 	}
 }
