@@ -12,7 +12,9 @@
     <button type="button" class="btn btn-default">HOME</button>
   </div>
   <div class="btn-group" role="group">
-    <button type="button" class="btn btn-default">LOGIN</button>
+  <form action="src/login.java">
+    <button type="submit" class="btn btn-default">LOGIN</button>
+    </form>
   </div>
   <div class="btn-group" role="group">
     <button type="button" class="btn btn-default">CONTATTI</button>
