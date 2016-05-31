@@ -4,6 +4,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import it.uniroma3.controller.action.facadeAutenticazione;
+
 @Entity
 public class Utente {
 

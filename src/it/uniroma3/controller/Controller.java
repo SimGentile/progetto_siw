@@ -27,7 +27,7 @@ public class Controller extends HttpServlet {
 		Action action;
 		try {
 			action = (Action)Class.forName(actionName).newInstance();
-			nextPage = action.perform(request);
+			nextPage = action.esegui(request);
 		} catch (Exception e) {
 			nextPage = "/index.jsp";
 		} 

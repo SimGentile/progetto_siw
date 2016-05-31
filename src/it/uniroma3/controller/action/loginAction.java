@@ -6,7 +6,7 @@ import javax.servlet.http.*;
 import it.uniroma3.*;
 import it.uniroma3.model.Utente;
 
-public class loginAction implements Action {
+public class loginAction implements Action,facadeAutenticazione {
 	private String username="";
 	private String password="";
 	private int ruolo=0;
@@ -37,7 +37,8 @@ public class loginAction implements Action {
 
 	public loginAction(){}
 
-	public Utente Login(String username, String password) {
+	@Override
+	public Utente login(String username, String password) {
 		Utente utente = new Utente();
 		utente.setPassword(getPassword());
 		utente.setRuolo(getRuolo());
@@ -45,15 +46,16 @@ public class loginAction implements Action {
 		return utente;
 	}
 
-public String perform(HttpServletRequest request) {
-	username = request.getParameter("username");
-	password = request.getParameter("password");
-	Utente utente = Login(username, password);
-	if (utente!=null) {
-		HttpSession session = request.getSession();
-		session.setAttribute("utente",utente);
-		return "OK";
-	} else
-		return "KO";
-}
+	public String esegui(HttpServletRequest request) throws ServletException  {
+		facadeAutenticazione authService = new loginAction();
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		Utente utente = authService.login(username, password);
+		if (utente!=null) {
+			HttpSession session = request.getSession();
+			session.setAttribute("utente",utente);
+			return "OK";
+		} else
+			return "KO";
+	}
 }

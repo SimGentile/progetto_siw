@@ -20,7 +20,7 @@ public class Autentica extends HttpServlet {
     					throws IOException, ServletException {
 		String prossimaPagina = "/fallimento.jsp";
 		loginAction login = new loginAction();
-		String esito = login.perform(request);
+		String esito = login.esegui(request);
 		if (esito.equals("OK"))
 			prossimaPagina = "/risorsaProtetta.jsp";
 		ServletContext application  = getServletContext();
