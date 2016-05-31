@@ -12,7 +12,7 @@
     <button type="button" class="btn btn-default">HOME</button>
   </div>
   <div class="btn-group" role="group">
-  <form action="src/login.java">
+  <form action="login.jsp">
     <button type="submit" class="btn btn-default">LOGIN</button>
     </form>
   </div>

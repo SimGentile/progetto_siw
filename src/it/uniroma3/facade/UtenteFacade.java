@@ -13,7 +13,6 @@ import it.uniroma3.model.Utente;
 public class UtenteFacade {
 	@PersistenceContext(unitName = "controller-unit")
 	private EntityManager em;
-	
 	private Map<String,Utente> utenti;
 	
 	public UtenteFacade() {
@@ -35,6 +34,4 @@ public class UtenteFacade {
 		Utente utente = em.find(Utente.class, username);
 		return utente;
 	}
-	
-
 }

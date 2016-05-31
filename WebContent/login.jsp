@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Login</h1>
-	 <form action="login.do" method="POST">
+	 <form action="login.do" method="Post">
 		<p>Username: <input type="text" name="username"/></p>
 		<p>Password: <input type="password" name="password"/></p>
         <p><input type="submit" value="Login" name="login"/></p>

@@ -45,19 +45,6 @@ public class loginAction implements Action {
 		return utente;
 	}
 
-	public void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws IOException, ServletException {			
-		String prossimaPagina = "fallimento.jsp";
-		loginAction login = new loginAction();
-		String esito = login.perform(request);
-		if (esito.equals("OK"))
-			prossimaPagina = "/risorsaProtetta.jsp";
-		ServletContext application  = request.getSession().getServletContext();
-		RequestDispatcher rd = application.getRequestDispatcher(prossimaPagina);
-		rd.forward(request, response);
-	}
-
-
 public String perform(HttpServletRequest request) {
 	username = request.getParameter("username");
 	password = request.getParameter("password");
