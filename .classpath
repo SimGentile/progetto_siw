@@ -3,7 +3,11 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.USER_LIBRARY/Postgres"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/librerie/postgresql-9.4.1208.jre6.jar"/>
@@ -14,7 +18,11 @@
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/geronimo-jta_1.1_spec-1.1.1.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/hibernate-commons-annotations-5.0.1.Final.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/hibernate-core-5.1.0.Final.jar"/>
-	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/hibernate-jpa-2.1-api-1.0.0.Final.jar" sourcepath="">
+		<attributes>
+			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/jandex-2.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/javassist-3.20.0-GA.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/jboss-logging-3.3.0.Final.jar"/>
@@ -40,5 +48,9 @@
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/javaee-api-6.0-6.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/slf4j-api-1.7.14.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/slf4j-jdk14-1.7.14.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/arq-2.1.jar.zip"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/el-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat7-websocket.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

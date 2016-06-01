@@ -5,6 +5,7 @@
 <class>it.uniroma3.model.Medico</class>
 <class>it.uniroma3.model.Paziente</class>
 <class>it.uniroma3.model.TipologiaDiEsame</class>
+<class>it.uniroma3.model.Utente</class>
 <properties>
 <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
 <property name="javax.persistence.jdbc.user" value="postgres"/>

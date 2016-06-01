@@ -1,5 +1,7 @@
 package it.uniroma3.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -7,8 +9,12 @@ import javax.persistence.Id;
 import it.uniroma3.controller.action.facadeAutenticazione;
 
 @Entity
-public class Utente {
+public class Utente implements Serializable{
 
+/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 @Id
 private String username;
 @Column(nullable=false)

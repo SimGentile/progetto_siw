@@ -20,6 +20,10 @@ import javax.persistence.*;
 
 @WebServlet("/loginAction")
 public class loginAction extends HttpServlet implements Action,facadeAutenticazione {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String username="";
 	private String password="";
 	private int ruolo=0;
@@ -52,8 +56,8 @@ public class loginAction extends HttpServlet implements Action,facadeAutenticazi
 
 	@Override
 	public Utente login(String username, String password) {
-		UtenteFacade utenteF = new UtenteFacade();
-		return utenteF.getUtente(username);
+		UtenteFacade utente = new UtenteFacade();
+		return utente.getUtenti().get(username);
 	}
 
 	public String esegui(HttpServletRequest request) throws ServletException  {
