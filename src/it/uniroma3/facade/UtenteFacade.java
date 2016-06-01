@@ -1,10 +1,9 @@
 package it.uniroma3.facade;
-
+import javax.persistence.EntityManager;
 import java.util.HashMap;
 import java.util.Map;
 
 import javax.ejb.Stateless;
-import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import it.uniroma3.model.Utente;
@@ -19,9 +18,11 @@ public class UtenteFacade {
 	this.utenti = new HashMap<String,Utente>();
 	Utente utente = new Utente("Roberto","Roberto",1);
 	utenti.put(utente.getUsername(), utente);
+	inserisciUtente(utente.getUsername(),utente.getPassword(),utente.getRuolo());
 	
 	utente = new Utente("Simona","Simona",2);
 	utenti.put(utente.getUsername(), utente);
+	inserisciUtente(utente.getUsername(),utente.getPassword(),utente.getRuolo());
 	
 	}
 	

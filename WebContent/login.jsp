@@ -6,10 +6,10 @@
   </head>
   <body>
     <h1>Login</h1>
-	 <form action="loginAction" method="post">
+	 <form action="login.do" method="POST">
 		<p>Username: <input type="text" name="username"/></p>
 		<p>Password: <input type="password" name="password"/></p>
-        <p><input type="submit" value="Login" name="login"/></p>
+        <p><input type="submit" value="login" name="login"/></p>
 	</form>
   </body>
 </html>

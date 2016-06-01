@@ -16,6 +16,7 @@ import javax.servlet.http.*;
 import it.uniroma3.*;
 import it.uniroma3.facade.UtenteFacade;
 import it.uniroma3.model.Utente;
+import javax.persistence.*;
 
 @WebServlet("/loginAction")
 public class loginAction extends HttpServlet implements Action,facadeAutenticazione {
