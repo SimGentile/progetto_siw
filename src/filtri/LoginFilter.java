@@ -1,11 +1,13 @@
 package filtri;
 
 import java.io.IOException;
+import javax.persistence.Entity;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.openejb.server.httpd.HttpSession;
 
+@Entity
 public class LoginFilter implements Filter {
 	private ServletContext application;
 

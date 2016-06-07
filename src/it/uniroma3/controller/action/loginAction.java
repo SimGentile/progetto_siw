@@ -1,6 +1,7 @@
 package it.uniroma3.controller.action;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.persistence.Entity;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -15,53 +16,52 @@ import javax.servlet.annotation.*;
 import javax.servlet.http.*;
 import it.uniroma3.*;
 import it.uniroma3.facade.UtenteFacade;
+import it.uniroma3.facade.facadeAutenticazione;
+import it.uniroma3.facade.facadeAutenticazioneImpl;
 import it.uniroma3.model.Utente;
+
+import javax.ejb.EJB;
 import javax.persistence.*;
 
+
 @WebServlet("/loginAction")
-public class loginAction extends HttpServlet implements Action,facadeAutenticazione {
+public class loginAction extends HttpServlet implements Action {
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private String username="";
-	private String password="";
-	private int ruolo=0;
 	
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public int getRuolo() {
-		return ruolo;
-	}
-
-	public void setRuolo(int ruolo) {
-		this.ruolo = ruolo;
-	}
+	@EJB(beanName="utenteFacade")
+	private UtenteFacade utente;
 
 	public loginAction(){}
 
-	@Override
-	public Utente login(String username, String password) {
-		UtenteFacade utente = new UtenteFacade();
-		return utente.getUtenti().get(username);
+
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+
+		String prossimaPagina = "/fallimento.jsp";
+		ServletContext application  = getServletContext();
+		RequestDispatcher rd = application.getRequestDispatcher(prossimaPagina);
+		rd.forward(request, response);
+	}
+
+
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+		String prossimaPagina = "/fallimento.jsp";
+		loginAction login = new loginAction();
+		String esito = login.esegui(request);
+		if (esito.equals("OK"))
+			prossimaPagina = "/risorsaProtetta.jsp";
+		ServletContext application  = getServletContext();
+		RequestDispatcher rd = application.getRequestDispatcher(prossimaPagina);
+		rd.forward(request, response);
 	}
 
 	public String esegui(HttpServletRequest request) throws ServletException  {
-		facadeAutenticazione authService = new loginAction();
+		facadeAutenticazione authService = new facadeAutenticazioneImpl();
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		Utente utente = authService.login(username, password);

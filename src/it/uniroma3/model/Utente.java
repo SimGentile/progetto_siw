@@ -5,10 +5,11 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
-import it.uniroma3.controller.action.facadeAutenticazione;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="utente")
 public class Utente implements Serializable{
 
 /**
@@ -22,6 +23,13 @@ private String password;
 @Column(nullable=false)
 private int ruolo;
 
+public Utente() {}
+
+public Utente(String username, String password, int ruolo) {
+	this.username = username;
+	this.password = password;
+	this.ruolo = ruolo;
+}
 @Override
 public int hashCode() {
 	final int prime = 31;
@@ -77,14 +85,6 @@ public int getRuolo() {
 }
 
 public void setRuolo(int ruolo) {
-	this.ruolo = ruolo;
-}
-
-public Utente() {}
-
-public Utente(String username, String password, int ruolo) {
-	this.username = username;
-	this.password = password;
 	this.ruolo = ruolo;
 }
 }

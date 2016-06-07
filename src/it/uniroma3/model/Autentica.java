@@ -1,10 +1,12 @@
-package it.uniroma3.controller.action;
-import javax.persistence.*;
+package it.uniroma3.model;
 import java.io.*;
+import javax.persistence.Entity;
 import javax.servlet.*;
-import javax.servlet.annotation.ServletSecurity;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+
+import it.uniroma3.controller.action.loginAction;
+@Entity
 @WebServlet("/login.do")
 
 public class Autentica extends HttpServlet {

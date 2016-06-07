@@ -36,6 +36,11 @@ public class Medico {
 	
 	
 
+	protected Medico() {
+	}
+
+
+
 	public String getNome() {
 		return nome;
 	}

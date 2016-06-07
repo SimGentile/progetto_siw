@@ -26,11 +26,6 @@
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/jandex-2.0.0.Final.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/javassist-3.20.0-GA.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/hibernate-release-5.1.0.Final/lib/required/jboss-logging-3.3.0.Final.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
-		<attributes>
-			<attribute name="owner.project.facets" value="java"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-api-4.7.4.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/openejb-client-4.7.4.jar"/>
@@ -48,9 +43,44 @@
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/javaee-api-6.0-6.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/slf4j-api-1.7.14.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/slf4j-jdk14-1.7.14.jar"/>
-	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/arq-2.1.jar.zip"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/el-api.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat7-websocket.jar"/>
 	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/tomcat-api.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-asm5-shaded-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-bundleutils-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-finder-shaded-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-naming-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/xbean-reflect-4.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/javax.faces-api-2.1.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/alt-rt.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/charsets.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/deploy.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/javaws.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/jce.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/jfr.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/jfxrt.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/jsse.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/management-agent.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/plugin.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/resources.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jre1.7.0_79/lib/rt.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/simona/Scaricati/j2eesdk-1_4_03-linux.bin"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/JSTL API"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/librerie/arq-2.1.jar.zip"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-7-openjdk-amd64">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/jsp-api-2.1.jar.zip"/>
+	<classpathentry kind="lib" path="/home/simona/Documenti/SIW/apache-tomee-webprofile-1.7.4/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Scaricati/javax.faces-api-2.0.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Scaricati/javax.faces-api-2.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="/home/simona/Scaricati/javax.faces-api-2.0-sources.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

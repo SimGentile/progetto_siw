@@ -1,20 +1,31 @@
 package it.uniroma3.facade;
 import javax.persistence.EntityManager;
+import javax.persistence.OneToMany;
 import java.util.HashMap;
 import java.util.Map;
-
 import javax.ejb.Stateless;
 import javax.persistence.PersistenceContext;
-
-import it.uniroma3.controller.action.facadeAutenticazione;
 import it.uniroma3.model.Utente;
 
-@Stateless 
+@Stateless(name="utenteFacade")
 public class UtenteFacade {
-	@PersistenceContext(unitName = "controller-unit")
-	private EntityManager em;
+
+	@OneToMany
 	private Map<String,Utente> utenti;
 	
+    @PersistenceContext(unitName="controller-unit")
+    private EntityManager em;
+    
+	public Utente inserisciUtente(String username, String password, int ruolo) {
+		Utente utente = new Utente(username,password,ruolo);
+		em.persist(utente);
+		return utente;
+		}
+
+	public Utente getUtente(String username) {
+		Utente utente = em.find(Utente.class, username);
+		return utente;
+	}
 	public EntityManager getEm() {
 		return em;
 	}
@@ -30,23 +41,6 @@ public class UtenteFacade {
 	
 	public UtenteFacade() {
 	this.utenti = new HashMap<String,Utente>();
-	Utente utente = new Utente("Roberto","Roberto",1);
-	utenti.put(utente.getUsername(), utente);
-	inserisciUtente(utente.getUsername(),utente.getPassword(),utente.getRuolo());
 	
-	utente = new Utente("Simona","Simona",2);
-	utenti.put(utente.getUsername(), utente);
-	inserisciUtente(utente.getUsername(),utente.getPassword(),utente.getRuolo());
-	
-	}
-	public Utente inserisciUtente(String username, String password, int ruolo) {
-		Utente utente = new Utente(username,password,ruolo);
-		em.persist(utente);
-		return utente;
-		}
-
-	public Utente getUtente(String username) {
-		Utente utente = em.find(Utente.class, username);
-		return utente;
 	}
 }
